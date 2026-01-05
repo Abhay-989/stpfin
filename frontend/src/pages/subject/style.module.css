@@ -1,0 +1,102 @@
+/* --- Subjects Container --- */
+.subjects {
+  display: flex;           /* Align subjects in a line */
+  flex-wrap: wrap;         /* Wrap to next line if too many */
+  gap: 1rem;               /* Space between subject buttons */
+  margin-top: 2rem;
+  padding: 0 1rem;
+  justify-content: flex-start; /* Align left */
+}
+
+/* --- Individual Subject Card --- */
+.subject {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Subject Button --- */
+.subjectBtn {
+  background: #6a0dad;    /* Purple color */
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+}
+
+.subjectBtn:hover {
+  background: #7b1ed6;   /* Slightly lighter purple on hover */
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Delete Button --- */
+.deleteBtn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.deleteBtn:hover {
+  background: #ff6b81;
+  transform: scale(1.15);
+}
+
+/* --- Add Button --- */
+.addBtn {
+  margin-top: 2rem;
+  background: #5b00a6;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.addBtn:hover {
+  background: #7a00db;
+}
+
+/* --- Subject Page Heading --- */
+.name {
+   font-size: 2.5rem;
+  background: linear-gradient(90deg, #6BFF6B, #20b2aa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 600px) {
+  .subjects {
+    flex-direction: column; /* Stack subjects on mobile */
+    gap: 0.8rem;
+  }
+
+  .subjectBtn {
+    width: 100%;           /* Full width on mobile */
+  }
+}

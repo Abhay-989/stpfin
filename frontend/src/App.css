@@ -1,0 +1,123 @@
+
+.container {
+  font-family: "Poppins", sans-serif;
+  background: #120821;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+/* --- Left Side --- */
+.mainContainer_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainContainer_left > p {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #6BFF6B, #c786d5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Button --- */
+.buttonJoin {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: rgb(197, 48, 208);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px; 
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+.buttonJoin:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(197, 48, 208, 0.4); 
+  background: rgb(180, 40, 190);
+}
+
+.buttonJoin:active {
+  transform: translateY(-1px);
+}
+
+/* --- Right Side --- */
+.mainContainer_right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer_right > div {
+  width: 100%;
+  max-width: 500px;
+}
+
+.mainContainer_right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(199, 134, 213, 0.2)); 
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .mainContainer_left {
+    align-items: center;
+  }
+
+  .mainContainer_left > p {
+    font-size: 2.5rem;
+  }
+
+  .mainContainer_right > div {
+    max-width: 80%; 
+  }
+}
+
+/* Loading Text */
+.loadingText {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

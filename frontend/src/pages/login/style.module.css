@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #120821; /* Dark background */
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.cardContainer {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  min-height: 500px;
+  background-color: #1e1b36; /* Card background */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 1px solid #332f50;
+}
+
+/* --- Left Side (Form) --- */
+.cardContainer_left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardLeft_heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.errorMsg {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-height: 1.5rem; /* Prevents jumping when error appears */
+}
+
+.inputContainers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.inputField {
+  padding: 1rem;
+  background-color: #2b2640;
+  border: 1px solid #443f5e;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+.inputField::placeholder {
+  color: #aaa;
+}
+
+.inputField:focus {
+  border-color: #5b00a6;
+  box-shadow: 0 0 0 3px rgba(91, 0, 166, 0.2);
+}
+
+.loginBtn {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, #5b00a6, #7a00db);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.loginBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.loginBtn:active {
+  transform: translateY(0);
+}
+
+/* --- Right Side (Info) --- */
+.cardContainer_right {
+  flex: 0.8;
+  background: linear-gradient(135deg, #5b00a6, #240046);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cardContainer_right p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.backBtn {
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.backBtn:hover {
+  background: white;
+  color: #5b00a6;
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .cardContainer_right {
+    padding: 2rem 1rem;
+  }
+  
+  .cardContainer_right p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+//create subject
+POST http://localhost:9080/subject HTTP/1.1
+Content-Type: application/json
+{
+  "name": "Maths1", 
+  "semester":"1"
+}
+
+    
+
+###
+//delete
+POST http://localhost:9080/resources/693c531ba27be6bd5345150c HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "email@example.com",
+    "password": "password"
+}
+
+###
+//create semester
+POST http://localhost:9080/semester HTTP/1.1
+Content-Type: application/json
+{
+  "number":1
+}
+
+
+###
+
+GET http://localhost:9080/semesters
+
+###
+GET http://localhost:9080/subjects/:semesterNumber
+###
+
+GET http://localhost:9080/resources/:subjectName
+
